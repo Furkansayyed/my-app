@@ -16,6 +16,10 @@ export default function TextForm(props) {
         props.showAlert('Done Converting to Lower Case' , 'success');
     }
 
+    const handleClear = () => {
+        setText(" ");
+    }
+
     const handleCopy = () => {
         let text = document.getElementById("myBox");
         text.select();
@@ -46,8 +50,8 @@ export default function TextForm(props) {
                 <button className="btn btn-primary mx-2" onClick={handleLowClick}>Convert to lower case</button>
 
                 <button className="btn btn-primary mx-2" onClick={handleCopy} > Copy Text</button>
-
                 <button className="btn btn-primary mx-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+                <button className="btn btn-danger mx-2" onClick={handleExtraSpaces}>Clear</button>
             </div>
 
             <div className="container my-2">
